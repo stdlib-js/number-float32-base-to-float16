@@ -35,32 +35,14 @@ limitations under the License.
 
 > Convert a [single-precision floating-point number][ieee754] to the nearest [half-precision floating-point number][half-precision-floating-point-format].
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/number-float32-base-to-float16
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var float32ToFloat16 = require( '@stdlib/number-float32-base-to-float16' );
+import float32ToFloat16 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-to-float16@esm/index.mjs';
 ```
 
 #### float32ToFloat16( x )
@@ -68,7 +50,7 @@ var float32ToFloat16 = require( '@stdlib/number-float32-base-to-float16' );
 Converts a [single-precision floating-point number][ieee754] to the nearest [half-precision floating-point number][half-precision-floating-point-format].
 
 ```javascript
-var float64ToFloat32 = require( '@stdlib/number-float64-base-to-float32' );
+import float64ToFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs';
 
 var y = float32ToFloat16( float64ToFloat32( 1.337 ) );
 // returns 1.3369140625
@@ -90,11 +72,16 @@ var y = float32ToFloat16( float64ToFloat32( 1.337 ) );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var uniform = require( '@stdlib/random-array-uniform' );
-var pickArguments = require( '@stdlib/utils-pick-arguments' );
-var logEachMap = require( '@stdlib/console-log-each-map' );
-var float32ToFloat16 = require( '@stdlib/number-float32-base-to-float16' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
+import pickArguments from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-pick-arguments@esm/index.mjs';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
+import float32ToFloat16 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-to-float16@esm/index.mjs';
 
 // Generate an array of random numbers:
 var f32 = uniform( 100, 0.0, 100.0, {
@@ -103,6 +90,10 @@ var f32 = uniform( 100, 0.0, 100.0, {
 
 // Convert each single-precision floating-point number to the nearest half-precision floating-point number:
 logEachMap( 'float32: %f => float16: %f', f32, pickArguments( float32ToFloat16, [ 1 ] ) );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -111,91 +102,7 @@ logEachMap( 'float32: %f => float16: %f', f32, pickArguments( float32ToFloat16, 
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/number/float32/base/to_float16.h"
-```
-
-#### stdlib_base_float32_to_float16( x )
-
-Converts a [single-precision floating-point number][ieee754] to the nearest [half-precision floating-point number][half-precision-floating-point-format].
-
-```c
-#include "stdlib/number/float16/ctor.h"
-
-stdlib_float16_t x = stdlib_base_float32_to_float16( 3.14f );
-```
-
-The function accepts the following arguments:
-
--   **x**: `[in] float` input value.
-
-```c
-stdlib_float16_t stdlib_base_float32_to_float16( const float x );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/number/float32/base/to_float16.h"
-#include "stdlib/number/float16/ctor.h"
-#include <stdint.h>
-#include <stdio.h>
-
-int main( void ) {
-    const float x[] = { 3.14f, -3.14f, 0.0f, 0.0f/0.0f };
-
-    stdlib_float16_t v;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        v = stdlib_base_float32_to_float16( x[ i ] );
-        printf( "%f => uint16: %d\n", x[ i ], stdlib_float16_to_bits( v ) );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -214,7 +121,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
