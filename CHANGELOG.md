@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`765abdf`](https://github.com/stdlib-js/stdlib/commit/765abdffa2d20193f4fe18f7add2061d7700ec1f) - **bench:** refactor to use string interpolation in `number/float32/base` [(#9909)](https://github.com/stdlib-js/stdlib/pull/9909) _(by Lokesh Ranjan)_
 -   [`9f03000`](https://github.com/stdlib-js/stdlib/commit/9f03000d699c14f795c53f2eac17567a7ca787b5) - **feat:** add `number/float32/base/to-float16` [(#8938)](https://github.com/stdlib-js/stdlib/pull/8938) _(by Gururaj Gurram, Athan Reines, stdlib-bot)_
 
 </details>
@@ -34,10 +35,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gururaj Gurram
+-   Lokesh Ranjan
 
 </section>
 
