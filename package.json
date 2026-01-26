@@ -55,7 +55,7 @@
     "@stdlib/number-float16-ctor": "github:stdlib-js/number-float16-ctor#main",
     "@stdlib/number-float32-base-exponent": "^0.2.3",
     "@stdlib/number-float64-base-to-float32": "^0.2.2",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/console-log-each-map": "github:stdlib-js/console-log-each-map#main",
