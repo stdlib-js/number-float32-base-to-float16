@@ -65,7 +65,7 @@
     "@stdlib/math-base-assert-is-negative-zero": "^0.2.2",
     "@stdlib/number-float16-base-from-word": "^0.2.0",
     "@stdlib/random-array-uniform": "^0.2.1",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "@stdlib/utils-pick-arguments": "^0.2.2",
     "@stdlib/utils-try-require": "^0.2.2",
     "proxyquire": "^2.0.0",
