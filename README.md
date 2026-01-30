@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import float32ToFloat16 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-to-float16@deno/mod.js';
+import float32ToFloat16 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-to-float16@v0.1.0-deno/mod.js';
 ```
 
 #### float32ToFloat16( x )
@@ -76,7 +76,7 @@ var y = float32ToFloat16( float64ToFloat32( 1.337 ) );
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
 import pickArguments from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-pick-arguments@deno/mod.js';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import float32ToFloat16 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-to-float16@deno/mod.js';
+import float32ToFloat16 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-to-float16@v0.1.0-deno/mod.js';
 
 // Generate an array of random numbers:
 var f32 = uniform( 100, 0.0, 100.0, {
